@@ -53,6 +53,7 @@ urlpatterns = [
     path("faq/", views.faq, name="faq"),
     path("ecs_project", views.ecs_project, name="ecs_project"),
     path("ecs_project/ambassadors", views.ecs_project_ambassadors, name="ecs_project_ambassadors"),
+    path("ecs_project/ecs_codesign_process", views.ecs_project_codesign, name="ecs_project_codesign"),
     path("call_ambassadors/", views.call_ambassadors, name="call_ambassadors"),
     path("subscribe/", views.subscribe, name="subscribe"),
     path("moderation/", views.moderation, name="moderation"),

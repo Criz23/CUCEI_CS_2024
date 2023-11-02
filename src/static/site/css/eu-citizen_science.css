@@ -329,6 +329,9 @@ a{
         .ambassador-card {
             width: 100%;    
         }
+        .codesign-card {
+            width: 100%;    
+        }
     }
 
     /* Media query Mid-screens (tablets) */
@@ -336,12 +339,18 @@ a{
         .ambassador-card {
             width: 48%;     
         }
+        .codesign-card {
+            width: 42%;     
+        }
     }
 
     /* Media query Big screens */
     @media (min-width: 901px) {
         .ambassador-card {
             width: 30%;     
+        }
+        .codesign-card {
+            width: 42%;     
         }
     }
 
@@ -371,20 +380,48 @@ a{
         overflow: hidden;
         margin: 15px;
         background-color: var(--lightBlueOpacity);
-        width: 100%; /* Aquí definimos una anchura del 80% de su contenedor. Ajusta según tus necesidades */
-        max-width: 600px; /* Define un ancho máximo si es necesario */
+        width: 100%; 
+        max-width: 600px; 
     }
     
-    /* Estilo para la información dentro del modal. Si quieres un padding diferente al de la card, ajústalo aquí */
     .ambassador-modal .ambassador-info {
         padding: 20px 30px;
     }
     
-    /* Aquí ajustamos el comportamiento de los textos dentro del modal */
     .ambassador-modal .role, .ambassador-modal .affiliation, .ambassador-modal .link a {
-        white-space: normal; /* Permitir salto de línea */
-        text-overflow: clip; /* Eliminar el comportamiento de los puntos suspensivos */
+        white-space: normal; 
+        text-overflow: clip; 
     }
 
+/* Related to co-design */
 
+    .row-full-width {
+        padding: 24px;
+        padding-left: 60px;
+        padding-right: 60px;
+        background-color: var(--lightBlueOpacity);
+    }
 
+    .row-full-width .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+
+    .codesign-card {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 15px;
+        background-color: var(--lightBlueOpacity);
+        transition: box-shadow 0.3s;
+        transition: transform 0.2s;
+    }
+
+    .codesign-card:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: scale(1.05);
+    }

@@ -52,6 +52,7 @@
                 <i class="fas fa-external-link-square-alt"></i> {% trans "Go to platform or network" %}
             </a>
 
+            <!-- Not Edit during Updating
             {% if platform.creator == user %}
            
             <a class="me-3 text-warning" href="/editPlatform/{{platform.id}}">
@@ -60,7 +61,7 @@
             <a  id="deletePlatform" class="me-3 text-danger doModalAction">
                 <i class="fas fa-trash"></i> Delete
             </a>
-            {% endif %}
+            {% endif %} -->
         </div><!-- End-of right column -->
 
         <div class="col-xl-4 col-md-6 col-12"><!-- Left column -->

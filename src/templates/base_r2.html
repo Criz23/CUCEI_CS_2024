@@ -212,6 +212,23 @@
             </div>
             {% block list_of_items %}
             {% endblock list_of_items %}
+            <!-- Modal Structure -->
+            <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="updateModalLabel">Platform Upgrade</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Due to major changes, the platform will not allow new content to be created until the 24th of April, at which time a new update will be launched. <br><br> We appreciate your patience!
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
         </main>
         {% cookielaw_banner %}
         {% block footer %}
@@ -288,6 +305,17 @@ $('.basicAutoComplete').keyup(function(){
 });
 
         </script>
+        <!-- Script para interceptar los clicks y mostrar el modal-->
+        <script>
+            $(document).ready(function () {
+              // Selector por clase para 'Login' y 'Signup', y selector específico para 'New Submission'.
+              $('.btn-my-outline-darkBlue, .btn-my-outline-darkGreen, button[type="submit"][data-bs-target="#modalsubmit"]').click(function (event) {
+                event.preventDefault(); // Previene la acción predeterminada.
+                $('#updateModal').modal('show'); // Muestra el modal de actualización.
+              });
+            });
+            </script>
+            
         {% block scripts %}
         {% endblock scripts %}
 

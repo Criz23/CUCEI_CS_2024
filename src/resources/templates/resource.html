@@ -105,7 +105,7 @@
                                                                    {% trans "Go to Resource" %}
                                                                    {% endif %}
                     </a>
-
+                    <!--
                     {% if resource.creator == user or user.is_staff or user.id in cooperators %}
                         {% if resource.isTrainingResource == True %}
                     <a class="btn btn-warning" 
@@ -130,9 +130,10 @@
                         id="buttonBookmarkResource" bookmarked="{{bookmarkedResource}}">
                         <i class="far fa-bookmark"></i> Bookmark
                     </button>
-
-                    <!--a href="#" class="btn btn-secondary">{% trans "Comment" %}</a-->
-                    {% endif %}
+                          
+                    
+                    {% endif %} 
+                    -->   
                 </div>
             </div>
 

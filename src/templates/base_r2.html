@@ -308,13 +308,20 @@ $('.basicAutoComplete').keyup(function(){
         <!-- Script para interceptar los clicks y mostrar el modal-->
         <script>
             $(document).ready(function () {
-              // Selector por clase para 'Login' y 'Signup', y selector específico para 'New Submission'.
-              $('.btn-my-outline-darkBlue, .btn-my-outline-darkGreen, button[type="submit"][data-bs-target="#modalsubmit"]').click(function (event) {
+              // Selector por clase para 'Login' y 'Signup'
+              $('.btn-my-outline-darkBlue, .btn-my-outline-darkGreen').click(function (event) {
+                event.preventDefault(); // Previene la acción predeterminada.
+                $('#updateModal').modal('show'); // Muestra el modal de actualización.
+              });
+            
+              // Selector específico para 'New Submission' utilizando la detección del evento en el botón directamente.
+              $('button[data-bs-target="#modalsubmit"]').click(function (event) {
+                event.stopImmediatePropagation(); // Detiene la propagación del evento para prevenir que otros manejadores sean ejecutados.
                 event.preventDefault(); // Previene la acción predeterminada.
                 $('#updateModal').modal('show'); // Muestra el modal de actualización.
               });
             });
-            </script>
+        </script>
             
         {% block scripts %}
         {% endblock scripts %}
